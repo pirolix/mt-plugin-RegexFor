@@ -28,7 +28,7 @@ sub _regex_common {
         $tag =~ s/^MT:?//i;
         require Storable;
         my $local_args = Storable::dclone($args);
-        $val = $ctx->tag( $tag, $local_args, $cond )
+        defined( $val = $ctx->tag( $tag, $local_args, $cond ))
             or return $ctx->error( &instance->translate( 'Unknown tag found: [_1]', $tag ));
     }
     defined $val
