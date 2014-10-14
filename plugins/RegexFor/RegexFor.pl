@@ -10,7 +10,7 @@ use MT 5;
 use vars qw( $VENDOR $MYNAME $FULLNAME $VERSION );
 $FULLNAME = join '::',
         (($VENDOR, $MYNAME) = (split /::/, __PACKAGE__)[-2, -1]);
-$VERSION = 'v0.10.386';
+$VERSION = 'v0.11.389';
 
 # http://www.sixapart.jp/movabletype/manual/object_reference/archives/mt_plugin.html
 use base qw( MT::Plugin );

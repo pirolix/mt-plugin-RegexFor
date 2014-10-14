@@ -58,7 +58,7 @@ sub _regex_common {
             defined( my $out = $builder->build( $ctx, $token, $cond ))
                 or return $ctx->error( $builder->errstr );
             $block_out .= $out;
-        }->()}egi;
+        }->()}egim;
         return $block_out;
     }
 
@@ -70,7 +70,7 @@ sub _regex_common {
                 or return $ctx->error( $builder->errstr );
             $out =~ s/^\s+|\s+$//g if $trim;
             $out;
-        }->()}egi;
+        }->()}egim;
         return $val;
     }
 
